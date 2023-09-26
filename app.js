@@ -1,5 +1,6 @@
 const submitBtnId = "#submit-btn";
 const dismissBtnId = "#dismiss-btn";
+const errorMessage = "Valid email required";
 
 let form = document.querySelector("#sub-form");
 
@@ -9,23 +10,30 @@ let dismissBtn = document.querySelector("#dismiss-btn");
 let primaryView = document.querySelector("primary");
 let secondaryView = document.querySelector("secondary");
 
-submitBtn.addEventListener("click",(e)=> {
-    // Prevent page refreshing
-    e.preventDefault();
+let errorLabel = document.querySelector("#error__label");
+let formInput = document.querySelector("#form__input");
 
-    if(!form.checkValidity())
-    {
-        //form.reportValidity();
-    }
-    else {
-        primaryView.style.display = "none";
-        secondaryView.style.display = "flex";
-    }
+let mailText = document.querySelector("#mailtext");
+
+submitBtn.addEventListener("click", (e) => {
+  // Prevent page refreshing
+  e.preventDefault();
+
+  if (!form.checkValidity()) {
+    errorLabel.style.visibility = "visible";
+    formInput.classList.add("haserror");
+  } else {
+    mailText.innerHTML = formInput.value;
+    errorLabel.style.visibility = "hidden";
+    formInput.classList.remove("haserror");
+    primaryView.style.display = "none";
+    secondaryView.style.display = "flex";
+  }
 });
 
-dismissBtn.addEventListener("click",(e)=>{
-    // Prevent page refreshing
-    e.preventDefault();
-    primaryView.style.display = "flex";
-    secondaryView.style.display = "none";    
+dismissBtn.addEventListener("click", (e) => {
+  // Prevent page refreshing
+  e.preventDefault();
+  primaryView.style.display = "flex";
+  secondaryView.style.display = "none";
 });

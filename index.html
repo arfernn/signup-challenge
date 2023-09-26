@@ -41,7 +41,6 @@
     <main>
       <primary>
         <div>
-          
           <img
             class="header-img"
             src="assets/images/illustration-sign-up-mobile.svg"
@@ -57,10 +56,16 @@
             <li>And much more!</li>
           </ul>
           <form id="sub-form" class="form">
-            <label for="form__input">Email address </label>
+            <div class="labels">
+              <label for="form__input">Email address </label>
+              <label id="error__label" class="error" for="form__input"
+                >Valid email required
+              </label>
+            </div>
             <input
               type="email"
-              id="form__imput"
+              id="form__input"
+              required
               placeholder="email@company.com"
             />
             <button id="submit-btn" onclick="" type="submit">
@@ -68,7 +73,6 @@
             </button>
           </form>
         </div>
-        
       </primary>
 
       <secondary>
@@ -82,14 +86,13 @@
           </div>
           <h1 class="header">Thanks for subscribing!</h1>
           <p>
-            A confirmation email has been sent to <b>ash@loremcompany.com</b>.
-            Please open it and click the button inside to confirm your
-            subscription.
+            A confirmation email has been sent to
+            <span id="mailtext">ash@loremcompany.com</span>. Please open it and
+            click the button inside to confirm your subscription.
           </p>
           <button id="dismiss-btn">Dismiss message</button>
         </div>
       </secondary>
-      
     </main>
     <div class="attribution">
       Challenge by
@@ -97,15 +100,5 @@
         >Frontend Mentor</a
       >. Coded by <a href="#">Arturo</a>.
     </div>
-
-    <!-- Sign-up form end -->
-
-    <!-- Success message start -->
-    <!--
-    Thanks for subscribing! A confirmation email has been sent to
-    ash@loremcompany.com. Please open it and click the button inside to confirm
-    your subscription. Dismiss message -->
-
-    <!-- Success message end -->
   </body>
 </html>
