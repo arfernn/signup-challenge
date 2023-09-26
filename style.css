@@ -67,12 +67,12 @@ main {
 
 primary {
   height: 840px;
-  display: none;
+  display: block;
 }
 
 secondary {
   height: 840px;
-  display: block;
+  display: none;
 }
 
 .success-img {
