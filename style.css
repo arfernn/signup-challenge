@@ -1,0 +1,155 @@
+:root {
+  --clr-tomato: hsl(4, 100%, 67%);
+  --clr-dark-slate-grey: hsl(234, 29%, 20%);
+  --clr-charcoal-grey: hsl(235, 18%, 26%);
+  --clr-grey: hsl(231, 7%, 60%);
+  --clr-white: hsl(0, 0%, 100%);
+}
+
+body {
+  font-size: 1rem;
+  font-family: "Roboto", sans-serif;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: grey;
+}
+
+li {
+  background: url(assets/images/icon-list.svg) no-repeat 0px 3px;
+  padding: 3px 10px 3px 2.125rem;
+  list-style: none;
+}
+
+ul {
+  margin-top: 1.5rem;
+  margin-bottom: 2rem;
+  padding-inline-start: 0px;
+}
+
+form {
+  display: flex;
+  flex-flow: column;
+}
+
+form > label {
+  font-size: 12px;
+  font-weight: 600;
+  padding-bottom: .5rem;
+}
+
+form > input { 
+  padding: .75rem 1.5rem .75rem 1.5rem;
+  border-radius: 6px;
+  border: 1px solid var(--clr-grey)
+}
+
+button { 
+  padding: 1rem 1.5rem 1rem 1.5rem;
+  margin-top: 1.625rem;
+  color: white;
+  background-color: var(--clr-dark-slate-grey);
+  font-weight: 700;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+}
+
+main {
+  width: 375px;
+  background-color: white;
+
+}
+
+
+primary {
+  height: 840px;
+  display: none;
+}
+
+secondary {
+  height: 840px;
+  display: block;
+}
+
+.success-img {
+  padding-bottom: 2rem;
+}
+
+#dismiss-btn {
+  margin-top: auto;
+}
+
+
+.main__content {
+  padding: 1.5rem;
+}
+
+.secondary__content {
+  padding: 10rem 1.5rem 3rem 1.5rem;
+  display: flex;
+  flex-flow: column;
+  height: 100%;
+}
+
+.header {
+  font-size: 40px;
+  padding-bottom: 1.275rem;
+  line-height: 1;
+}
+
+/*
+@media (min-width: 1000px) {
+  main {
+    width: 1440px;
+  }
+}*/
+
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+/*
+    2. Remove default margin
+  */
+* {
+  margin: 0;
+}
+/*
+    Typographic tweaks!
+    3. Add accessible line-height
+    4. Improve text rendering
+  */
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+/*
+    5. Improve media defaults
+  */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+/*
+    6. Remove built-in form typography styles
+  */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+
