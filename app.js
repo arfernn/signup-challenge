@@ -15,17 +15,17 @@ submitBtn.addEventListener("click",(e)=> {
 
     if(!form.checkValidity())
     {
-        form.reportValidity();
+        //form.reportValidity();
     }
     else {
         primaryView.style.display = "none";
-        secondaryView.style.display = "block";
+        secondaryView.style.display = "flex";
     }
 });
 
 dismissBtn.addEventListener("click",(e)=>{
     // Prevent page refreshing
     e.preventDefault();
-    primaryView.style.display = "block";
+    primaryView.style.display = "flex";
     secondaryView.style.display = "none";    
 });

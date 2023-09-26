@@ -7,6 +7,11 @@
   --clr-white: hsl(0, 0%, 100%);
 }
 
+.attribution {
+  position: absolute;
+  bottom: 2rem;
+}
+
 body {
   font-size: 1rem;
   font-family: "Roboto", sans-serif;
@@ -20,7 +25,7 @@ body {
 }
 
 li {
-  background: url(assets/images/icon-list.svg) no-repeat 0px 3px;
+  background: url(assets/images/icon-list.svg) no-repeat 0px 4px;
   padding: 3px 10px 3px 2.125rem;
   list-style: none;
 }
@@ -91,6 +96,7 @@ main {
 primary {
   height: 840px;
   display: block;
+  flex-flow: column;
 }
 
 secondary {
@@ -123,12 +129,56 @@ secondary {
   line-height: 1;
 }
 
-/*
+
 @media (min-width: 1000px) {
   main {
     width: 1440px;
+    height: 100vh;
+    background-color: var(--clr-dark-slate-grey);
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
-}*/
+
+  primary {
+    background-color: white;
+    border-radius: 25px;
+    width: auto;
+    height: auto;
+
+    display: flex;
+    flex-flow: row-reverse;
+
+    align-items: center;
+
+    padding: 1rem;
+  }
+
+  secondary { 
+    background-color: white;
+    border-radius: 25px;
+    height: auto;
+    width: 40%;
+
+  }
+
+  .secondary__content {
+    justify-content: center;
+    padding: 4rem;
+  }
+
+  .attribution {
+    color: white;
+  }
+
+  .header-img {
+    content: url('assets/images/illustration-sign-up-desktop.svg');
+  }
+
+  #dismiss-btn {
+    margin-top: 5rem;
+  }
+}
 
 /*
   1. Use a more-intuitive box-sizing model.
